@@ -52,16 +52,12 @@ const showGallery = searhText => {
         const galleryCard = document.querySelector('.gallery-card');
         const rect = galleryCard.getBoundingClientRect();
 
-        console.log(rect2);
-
         const scrollHeight = rect.height * 2;
         // // прокуртка на 2 висоти зображення як в завданні
         // window.scrollBy({ top: scrollHeight, behavior: 'smooth' });
         // пркурутка до нових зображень
         window.scrollBy({ top: rect2.bottom, behavior: 'smooth' });
       }
-
-      // console.log(rect);
     })
     .catch(error => {
       console.log(error);
