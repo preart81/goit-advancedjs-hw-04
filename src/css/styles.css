@@ -53,7 +53,8 @@ body {
   border-color: #4e75ff;
 }
 
-.search-form button[data-search] {
+.search-form button[data-search],
+.btn-load-more {
   padding: 8px 16px;
   transition: background-color 0.15s;
   background: #4e75ff;
@@ -66,7 +67,14 @@ body {
   letter-spacing: 0.04em;
 }
 
-.search-form button[data-search]:hover {
+.btn-load-more {
+  display: block;
+  margin: 24px auto;
+  margin-top: 24px;
+}
+
+.search-form button[data-search]:hover,
+.btn-load-more:hover {
   background: #6c8cff;
 }
 
@@ -120,22 +128,27 @@ body {
 
 .loader {
   display: block;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
   position: relative;
   left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  margin: 24px 0;
   animation: rotate 1s linear infinite;
+  border-radius: 50%;
 }
 
 .loader::before {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
   inset: 0px;
-  border-radius: 50%;
-  border: 5px solid #4e75ff;
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
   animation: prixClipFix 2s linear infinite;
+  border: 5px solid #4e75ff;
+  border-radius: 50%;
+}
+
+.is-hidden {
+  display: none;
 }
 
 @keyframes rotate {
