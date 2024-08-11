@@ -15,7 +15,7 @@ let searhText = '';
 
 const onSearch = event => {
   event.preventDefault();
-  searhText = searchInput.value.trim();
+  const searhText = searchInput.value.trim();
   searchInput.value = '';
 
   if (searhText === '') {
@@ -28,8 +28,10 @@ const onSearch = event => {
   }
 
   gallery.innerHTML = '';
-
   loader.style.display = 'block';
+
+  let page = 1;
+
   pixabayFetchImages(searhText)
     .then(images => {
       if (images.hits.length === 0) {
