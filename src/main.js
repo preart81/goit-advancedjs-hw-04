@@ -48,13 +48,14 @@ const showGallery = searhText => {
       } else {
         btnLoadMore.classList.remove('is-hidden');
       }
-      if (page > 1) {
-        const galleryCard = document.querySelector('.gallery-card');
-        const rect = galleryCard.getBoundingClientRect();
 
-        const scrollHeight = rect.height * 2;
+      if (page > 1) {
         // // прокуртка на 2 висоти зображення як в завданні
+        // const galleryCard = document.querySelector('.gallery-card');
+        // const rect = galleryCard.getBoundingClientRect();
+        // const scrollHeight = rect.height * 2;
         // window.scrollBy({ top: scrollHeight, behavior: 'smooth' });
+
         // пркурутка до нових зображень
         window.scrollBy({ top: rect2.bottom, behavior: 'smooth' });
       }
